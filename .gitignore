@@ -1,0 +1,8 @@
+*.sass-cache
+*.map
+*.scssc
+*.xml
+*node_modules/
+*v.1.0/
+*gulpfile.js
+*package-lock.json
