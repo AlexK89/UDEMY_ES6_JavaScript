@@ -41,3 +41,16 @@ function postFilter(post, comments) {
 
 console.log(postFilter(post, comments));
 console.log('===========================');
+
+
+//Reject filter
+// This is a hard one!  Create a function called 'reject'.  Reject should work in the opposite way of 'filter' -
+// if a function returns 'true', the item should *not* be included in the new array.  Hint: you can reuse filter.
+function reject(array, iteratorFunction) {
+	return array.filter((item) => {
+		return !iteratorFunction(item)
+	})
+}
+
+console.log(reject);
+console.log('===========================');
