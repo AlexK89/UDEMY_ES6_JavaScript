@@ -42,8 +42,7 @@ function pluck(array, property) {
 	let properties = array.map((arrayItem) => {
 		return arrayItem[property];
 	});
-	
-	console.log(properties);
+
 
 	return properties;
 }

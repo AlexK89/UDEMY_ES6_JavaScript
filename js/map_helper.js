@@ -35,8 +35,6 @@ function pluck(array, property) {
 		return arrayItem[property];
 	});
 
-	console.log(properties);
-
 	return properties;
 }
 pluck(paints, 'color'); // returns ['red', 'yellow', 'blue'];
