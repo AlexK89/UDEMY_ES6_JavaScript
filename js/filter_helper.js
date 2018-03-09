@@ -16,3 +16,18 @@ const availableFruits = products.filter(product => {
 
 console.log(availableFruits);
 console.log('===========================');
+
+// Filter comment by Post id
+
+const post = { id: 2, title: 'Hello world' };
+
+const comments = [{ postId: 2, content: 'Awesome' }, { postId: 4, content: 'cool' }, { postId: 2, content: 'Ehhh' }];
+
+function postFilter(post, comments) {
+	return comments.filter(comment => {
+		return comment.postId === post.id;
+	});
+}
+
+console.log(postFilter(post, comments));
+console.log('===========================');
