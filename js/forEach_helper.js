@@ -1,3 +1,5 @@
+'use strict';
+
 //Old fashion way
 var colors = ['green', 'red', 'blue'];
 
@@ -15,8 +17,8 @@ console.log('==========================');
 
 //Sum up array's numbers
 
-let numbers = [3, 5, 2, 6, 2, 6, 9];
-let sum = 0;
+var numbers = [3, 5, 2, 6, 2, 6, 9];
+var sum = 0;
 
 function summingNumbers(number) {
 	sum += number;
@@ -29,15 +31,15 @@ console.log('==========================');
 
 //Calculate areas
 
-const images = [{ height: 10, width: 30 }, { height: 20, width: 90 }, { height: 54, width: 32 }];
-let areas = [];
+var images = [{ height: 10, width: 30 }, { height: 20, width: 90 }, { height: 54, width: 32 }];
+var areas = [];
 
 function calcArea(image) {
 	return image.height * image.width;
 }
 
 images.forEach(function (image) {
-	let area = calcArea(image);
+	var area = calcArea(image);
 
 	areas.push(area);
 });

@@ -9,6 +9,7 @@ let allComputersCanRun = computers.every(computer => computer.ram >= 16);
 
 console.log(allComputersCanRun);
 console.log('=====================');
+console.log('=====================');
 
 // Check is any of items has valid property
 let anyComputersCanRun = computers.some(computer => computer.ram >= 16);

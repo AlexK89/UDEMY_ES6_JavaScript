@@ -1,8 +1,16 @@
+'use strict';
+
+var _keys = require('babel-runtime/core-js/object/keys');
+
+var _keys2 = _interopRequireDefault(_keys);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 //Find element
 
-const products = [{ name: 'banana', type: 'fruit', price: 2.4, quantity: 25 }, { name: 'apple', type: 'fruit', price: 1.3, quantity: 12 }, { name: 'carrot', type: 'vegetable', price: 2, quantity: 3 }, { name: 'plume', type: 'fruit', price: 3.1, quantity: 0 }, { name: 'raspberry', type: 'fruit', price: 2.7, quantity: 20 }];
+var products = [{ name: 'banana', type: 'fruit', price: 2.4, quantity: 25 }, { name: 'apple', type: 'fruit', price: 1.3, quantity: 12 }, { name: 'carrot', type: 'vegetable', price: 2, quantity: 3 }, { name: 'plume', type: 'fruit', price: 3.1, quantity: 0 }, { name: 'raspberry', type: 'fruit', price: 2.7, quantity: 20 }];
 
-const carrot = products.find(product => {
+var carrot = products.find(function (product) {
 	return product.name === 'carrot';
 });
 console.log(carrot);
@@ -14,21 +22,25 @@ function Car(brand) {
 	this.brand = brand;
 }
 
-let cars = [new Car('BMW'), new Car('Opel'), new Car('Mercedes'), new Car('Volvo'), new Car('Ford')];
+var cars = [new Car('BMW'), new Car('Opel'), new Car('Mercedes'), new Car('Volvo'), new Car('Ford')];
 
-const chosenCar = cars.find(car => car.brand === 'Opel');
+var chosenCar = cars.find(function (car) {
+	return car.brand === 'Opel';
+});
 
 console.log(chosenCar);
 console.log('===========================');
 
 //Find post
 
-const posts = [{ id: 1, post: 'New post' }, { id: 2, post: 'Old post' }];
+var posts = [{ id: 1, post: 'New post' }, { id: 2, post: 'Old post' }];
 
-const comment = { postId: 2, text: 'cool stuff' };
+var comment = { postId: 2, text: 'cool stuff' };
 
 function postForComment(posts, comment) {
-	return posts.find(post => post.id === comment.postId);
+	return posts.find(function (post) {
+		return post.id === comment.postId;
+	});
 }
 
 console.log(postForComment(posts, comment));
@@ -36,20 +48,24 @@ console.log('===========================');
 
 // Show admins
 
-const users = [{ id: 1, admin: false }, { id: 2, admin: false }, { id: 3, admin: true }];
+var users = [{ id: 1, admin: false }, { id: 2, admin: false }, { id: 3, admin: true }];
 
-const admin = users.find(user => user.admin);
+var admin = users.find(function (user) {
+	return user.admin;
+});
 
 console.log(admin);
 console.log('===========================');
 
 //find in array by object
-const ladders = [{ id: 1, height: 20 }, { id: 3, height: 25 }];
+var ladders = [{ id: 1, height: 20 }, { id: 3, height: 25 }];
 
 function findWhere(array, criteria) {
-	let key = Object.keys(criteria)[0];
+	var key = (0, _keys2.default)(criteria)[0];
 
-	return array.find(item => item[key] == criteria[key]);
+	return array.find(function (item) {
+		return item[key] == criteria[key];
+	});
 }
 
 console.log(findWhere(ladders, { height: 25 }));
