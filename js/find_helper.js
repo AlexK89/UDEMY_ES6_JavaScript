@@ -7,3 +7,16 @@ const carrot = products.find(product => {
 });
 console.log(carrot);
 console.log('===========================');
+
+//Find a specific car
+
+function Car(brand) {
+	this.brand = brand;
+}
+
+let cars = [new Car('BMW'), new Car('Opel'), new Car('Mercedes'), new Car('Volvo'), new Car('Ford')];
+
+const chosenCar = cars.find(car => car.brand === 'Opel');
+
+console.log(chosenCar);
+console.log('===========================');
