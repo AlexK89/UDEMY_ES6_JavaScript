@@ -16,3 +16,22 @@ let anyComputersCanRun = computers.some(computer => computer.ram >= 16);
 
 console.log(anyComputersCanRun);
 console.log('=====================');
+
+// Validate form
+function Field(value) {
+	this.value = value;
+}
+
+Field.prototype.validate = function () {
+	return this.value.length > 0;
+};
+
+const username = new Field('Alexandr');
+const password = new Field('12345');
+const birthday = new Field('01/01/2000');
+
+const fields = [username, password, birthday];
+
+const valid = fields.every(field => field.validate());
+console.log('Valid: ', valid);
+console.log('=====================');
