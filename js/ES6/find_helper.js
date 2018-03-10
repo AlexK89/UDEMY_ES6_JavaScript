@@ -33,3 +33,20 @@ const chosenCar = cars.find((car) => car.brand === 'Opel');
 
 console.log(chosenCar);
 console.log('===========================');
+
+
+//Find post
+
+const posts = [
+	{id: 1, post: 'New post'},
+	{id: 2, post: 'Old post'}
+];
+
+const comment = {postId: 2, text: 'cool stuff'};
+
+function postForComment(posts, comment) {
+	return posts.find((post) => post.id === comment.postId)
+}
+
+console.log(postForComment(posts, comment));
+console.log('===========================');
