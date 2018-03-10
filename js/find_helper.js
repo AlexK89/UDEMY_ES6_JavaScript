@@ -42,3 +42,14 @@ const admin = users.find(user => user.admin);
 
 console.log(admin);
 console.log('===========================');
+
+//find in array by object
+const ladders = [{ id: 1, height: 20 }, { id: 3, height: 25 }];
+
+function findWhere(array, criteria) {
+	let key = Object.keys(criteria)[0];
+
+	return array.find(item => item[key] == criteria[key]);
+}
+
+console.log(findWhere(ladders, { height: 25 }));
