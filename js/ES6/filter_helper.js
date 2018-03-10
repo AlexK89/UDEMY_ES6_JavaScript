@@ -6,6 +6,7 @@ const products = [
 	{name: 'raspberry', type: 'fruit', price: 2.7, quantity: 20 }
 ];
 
+
 //Filter by price
 const priceUnderTwoPounds = products.filter((product) => {
 	return product.price >= 2.4
@@ -13,6 +14,7 @@ const priceUnderTwoPounds = products.filter((product) => {
 
 console.log(priceUnderTwoPounds);
 console.log('===========================');
+
 
 //filter by availability and type
 
