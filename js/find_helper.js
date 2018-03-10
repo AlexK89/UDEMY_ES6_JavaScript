@@ -33,3 +33,12 @@ function postForComment(posts, comment) {
 
 console.log(postForComment(posts, comment));
 console.log('===========================');
+
+// Show admins
+
+const users = [{ id: 1, admin: false }, { id: 2, admin: false }, { id: 3, admin: true }];
+
+const admin = users.find(user => user.admin);
+
+console.log(admin);
+console.log('===========================');
