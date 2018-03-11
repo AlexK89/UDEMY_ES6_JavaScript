@@ -11,3 +11,20 @@ let sumNum = numbers.reduce((number, sum) => {
 console.log('Sum: ', sum);
 console.log('SumNum: ', sumNum);
 console.log('======================');
+
+//Create array of objects values
+
+const primaryColors = [
+	{color: 'red'},
+	{color: 'blue'},
+	{color: 'yellow'},
+];
+
+const arrayOfColors1 = primaryColors.reduce((previous, primaryColor) => {
+	previous.push(primaryColor.color);
+
+	return previous;
+}, []);
+
+console.log('Array of colours 1: ', arrayOfColors1);
+console.log('======================');
