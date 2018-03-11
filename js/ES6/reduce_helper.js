@@ -84,3 +84,21 @@ const deskTypes = desks.reduce(function(previous, desk) {
 
 console.log('Desks: ', deskTypes);
 console.log('======================');
+
+
+//Remove duplicates
+
+let someNumbers = [1, 1, 2, 3, 4, 4];
+
+function unique(array) {
+	return array.reduce((result, item) => {
+		let found = result.find(element => element === item);
+		if (!found) {
+			result.push(item);
+		}
+		return result;
+	}, [])
+}
+
+
+console.log(unique(someNumbers));
