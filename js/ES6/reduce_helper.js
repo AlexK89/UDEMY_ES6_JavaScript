@@ -63,3 +63,24 @@ function balancedParensM(string) {
 
 console.log('Balanced(my guess): ', balancedParensM('())'));
 console.log('======================');
+
+
+//Count desks
+
+const desks = [
+	{ type: 'sitting' },
+	{ type: 'standing' },
+	{ type: 'sitting' },
+	{ type: 'sitting' },
+	{ type: 'standing' }
+];
+
+const deskTypes = desks.reduce(function(previous, desk) {
+	if (desk.type === 'sitting') { previous.sitting++; }
+	if (desk.type === 'standing') { previous.standing++; }
+
+	return previous;
+}, { sitting: 0, standing: 0 });
+
+console.log('Desks: ', deskTypes);
+console.log('======================');
