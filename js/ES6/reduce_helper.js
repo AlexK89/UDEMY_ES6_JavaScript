@@ -28,3 +28,38 @@ const arrayOfColors1 = primaryColors.reduce((previous, primaryColor) => {
 
 console.log('Array of colours 1: ', arrayOfColors1);
 console.log('======================');
+
+
+//whiteboard question - are parentheses balanced?
+
+//My guess:
+function balancedParens(string) {
+	let array = string.split('');
+	let result = array.reduce((balance, char) => {
+		if (char === '(') {
+			return ++balance;
+		}
+		if (char === ')') {
+			return --balance;
+		}
+	}, 0);
+
+	return result;
+}
+
+console.log('Balanced(my guess): ', !Boolean(balancedParens('((((()))))')));
+console.log('======================');
+
+//Mentor variant:
+function balancedParensM(string) {
+	return !string.split('').reduce((previous, char) => {
+		if (previous < 0) { return previous; } // to cover the case if parenthesis are in wrong order
+		if (char === '(') { return ++previous; }
+		if (char === ')') { return --previous; }
+
+		return previous; //to skip other symbols
+	}, 0);
+}
+
+console.log('Balanced(my guess): ', balancedParensM('())'));
+console.log('======================');
