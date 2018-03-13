@@ -89,3 +89,38 @@ const user = {
 signup(user);
 
 //Coordinates real case
+
+const points = [
+	[1, 6],
+	[5, 15],
+	[8, 25],
+];
+
+const listOfPoints = points.map(([x, y]) => { return {x, y} }); //we can pass not pair of numbers, but destructures it here
+
+
+console.log('==================');
+console.log(listOfPoints);
+
+//Excercise 1
+
+const classes = [
+	[ 'Chemistry', '9AM', 'Mr. Darnick' ],
+	[ 'Physics', '10:15AM', 'Mrs. Lithun'],
+	[ 'Math', '11:30AM', 'Mrs. Vitalis' ]
+];
+
+const classesAsObject = classes.map(([subject, time, teacher]) => {
+	return {subject, time, teacher};
+});
+console.log(classesAsObject);
+
+
+//Excercise 2
+//Use array destructuring, recursion, and the rest/spread operators to create a function 'double'
+// that will return a new array with all values inside of it multiplied by two.
+const numbers = [1, 2, 3];
+
+function double( [first, ...rest] ) {
+	return !first ? [] : [first*2, ...double(rest)];
+}
