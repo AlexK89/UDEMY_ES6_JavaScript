@@ -72,3 +72,20 @@ const Google = {
 
 const { offices: [office] } = Google;
 console.log(office);
+
+//SignUP real case
+// if we use object as a parameter, we can easily de-structure it
+
+function signup({userName, userPassword, userEmail, userCity}) {
+	//do some logic
+}
+
+const user = {
+	userName: 'myname',
+	userPassword: 'mypassword',
+	userEmail: 'myemail@google.com',
+	userCity: 'London'
+};
+signup(user);
+
+//Coordinates real case
