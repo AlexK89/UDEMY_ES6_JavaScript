@@ -17,3 +17,14 @@ const userColors = ['blue', 'pink'];
 const colorPallette = ['yellow', ...defaultColors, ...userColors]; //concat method can'' do concat arrays and strings
 
 console.log(colorPallette);
+
+
+//Validation cases
+
+function validationShopingList(...list) {
+	if (list.indexOf('milk') < 0) {
+		return ['milk', ...list];
+	}
+	return list;
+}
+console.log(validationShopingList('bred', 'butter', 'milk','tomatoes', 'cheese'));
