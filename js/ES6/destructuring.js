@@ -15,5 +15,18 @@ const expenseNew = {
 	amount: '45$'
 };
 
-const { type } = expenseNew;
-const { amount } = expenseNew;
+const { type, amount } = expenseNew;
+
+console.log(type, amount);
+
+const savedFile = {
+	extension: '.jpg',
+	name: 'repost',
+	size: 10
+};
+
+function fileSummary({extension, name, size}) {
+	return `Format: ${extension}, name: ${name}, size: ${size}`;
+}
+
+console.log(fileSummary(savedFile));
