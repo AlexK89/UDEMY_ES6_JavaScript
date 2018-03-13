@@ -28,3 +28,19 @@ function validationShopingList(...list) {
 	return list;
 }
 console.log(validationShopingList('bred', 'butter', 'milk','tomatoes', 'cheese'));
+
+
+//Math library
+
+const Mathlib = {
+	calculateProduct(...rest) {
+		console.log('Rest: ', ...rest);
+		return this.multiply(...rest);
+	},
+	multiply(a, b) {
+		return a * b;
+	}
+};
+
+console.log(Mathlib.calculateProduct(4, 6));
+console.log(Mathlib.multiply(4, 6));
