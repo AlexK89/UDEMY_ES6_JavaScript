@@ -12,3 +12,8 @@ function addNumbersNew(...numbers) { //...numbers put all your arguments into th
 console.log(addNumbersNew(1,2,3,4,5)); // list of arguments
 
 //Spread
+const defaultColors = ['red', 'green'];
+const userColors = ['blue', 'pink'];
+const colorPallette = ['yellow', ...defaultColors, ...userColors]; //concat method can'' do concat arrays and strings
+
+console.log(colorPallette);
