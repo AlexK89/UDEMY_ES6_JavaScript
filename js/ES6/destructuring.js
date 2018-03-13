@@ -33,24 +33,42 @@ console.log(fileSummary(savedFile));
 
 //Array destructuring
 
-const companies = [
+const techCompanies = [
 	'Google',
 	'Facebook',
 	'Apple',
 	'Microsoft'
 ];
 
-const [ name ] = companies; //Google, the first item.
-const [ name1, name2, name3, ] = companies; //We can get more names;
+const [ name ] = techCompanies; //Google, the first item.
+const [ name1, name2, name3, ] = techCompanies; //We can get more names;
 console.log(name1, name2, name3);
 
-const [ name5, name6, , name7 ] = companies; //We can skip names;
+const [ name5, name6, , name7 ] = techCompanies; //We can skip names;
 console.log(name5, name6, name7);
 
-const [ name10, ...rest ] = companies;
+const [ name10, ...rest ] = techCompanies;
 console.log(rest); //return all except first one;
 
-const {length} = companies;
+const {length} = techCompanies;
 console.log(length); //array length
 
 
+const companies = [
+	{name: 'Google', locations: 'Mountain view'},
+	{name: 'Facebook', locations: 'Menlo Park'},
+	{name: 'Uber', locations: 'San Francisco'},
+];
+
+const [{ locations }] = companies;
+
+console.log(locations);
+
+
+//Walking directions
+const Google = {
+	offices: ['Ukraine', 'UK', 'USA', 'Canada']
+};
+
+const { offices: [office] } = Google;
+console.log(office);
