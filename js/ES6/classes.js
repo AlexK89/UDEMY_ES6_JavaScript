@@ -7,9 +7,9 @@ CarOld.prototype.drive = () => {
 	return 'vroom';
 };
 
-const car = new CarOld({title: 'Focus'});
+const carOld = new CarOld({title: 'Focus'});
 
-console.log(car);
+console.log(carOld);
 console.log('===============');
 
 function ToyotaOld(options) {
@@ -32,3 +32,36 @@ console.log('===============');
 
 
 //ES6
+console.log('=============== \n ES6 examples \n===============');
+
+class Car {
+	constructor({title}) { //here we have initialisation on parameters we want to pass
+		this.title = title;
+	}
+	drive() {
+		return 'vroom';
+	}
+}
+
+const car = new Car({title: 'Opel'});
+
+
+class Opel extends Car {
+	constructor({color, steer, title}) {
+		super(title); //Car.constructor
+		this.color = color;
+		this.steer = steer;
+	}
+	honk() {
+		return 'beep';
+	}
+}
+
+const opel = new Opel({color: 'red', steer: 'left', title: 'Opel'});
+console.log(car);
+console.log(car.title);
+console.log(car.drive());
+console.log('===============');
+console.log(opel.honk());
+console.log(opel.color);
+console.log(opel.drive());
