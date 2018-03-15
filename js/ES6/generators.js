@@ -8,6 +8,13 @@ for (let color of colors) {
 console.log('==================');
 
 function* numbers() { //* - is a sign for generators
+	yield 'cash';
 
+	yield 'less cash';
 }
-console.log(numbers());
+
+const gen = numbers();
+
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next('0 cash'));
