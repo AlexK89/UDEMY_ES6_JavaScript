@@ -10,7 +10,9 @@ console.log('==================');
 function* numbers() { //* - is a sign for generators
 	yield 'cash';
 
-	yield 'less cash';
+	const greceries = yield 'less cash';
+
+	return greceries;
 }
 
 const gen = numbers();
