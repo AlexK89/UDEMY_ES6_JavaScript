@@ -43,3 +43,23 @@ for(let brand of brands()){
 	allBrands.push(brand);
 }
 console.log('All brands: ', allBrands);
+console.log('====================================');
+
+const engineeringTeam = {
+	size: 3,
+	department: 'Engineering',
+	lead: 'Jill',
+	manager: 'Alex',
+	engineering: 'Dave'
+};
+
+function* TeamIterator(team) {
+	yield team.lead;
+	yield team.manager;
+	yield team.engineering;
+}
+const team = [];
+for(let member of TeamIterator(engineeringTeam)) {
+	team.push(member);
+}
+console.log(team);
