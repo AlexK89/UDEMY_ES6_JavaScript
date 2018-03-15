@@ -24,17 +24,22 @@ console.log(gen.next('0 cash'));
 console.log('====================================');
 
 function* brands() {
-	const dg = yield 'DG';
-	const lv = yield 'LV';
-	const prada = yield 'Prada';
-	const hermes = yield 'Hermes';
-
-	return [dg, lv, prada, hermes];
+	yield 'DG';
+	yield 'LV';
+	yield 'Prada';
+	yield 'Hermes';
 }
 
 const banchOfBrands = brands();
-console.log(banchOfBrands.next('dg t-shirt'));
-console.log(banchOfBrands.next('lv t-shirt'));
-console.log(banchOfBrands.next('prada pants'));
-console.log(banchOfBrands.next('Hermes bag'));
-console.log(banchOfBrands.next('Shopping list has been done'));
+console.log(banchOfBrands.next());
+console.log(banchOfBrands.next());
+console.log(banchOfBrands.next());
+console.log(banchOfBrands.next());
+console.log(banchOfBrands.next());
+
+const allBrands = [];
+
+for(let brand of brands()){
+	allBrands.push(brand);
+}
+console.log('All brands: ', allBrands);
