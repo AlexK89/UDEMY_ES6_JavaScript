@@ -45,6 +45,9 @@ for(let brand of brands()){
 console.log('All brands: ', allBrands);
 console.log('====================================');
 
+
+// Generator delegation
+
 const testingTeam = {
 	lead: 'Amanda',
 	tester: 'Luke',
@@ -63,7 +66,7 @@ function* TeamIterator(team) {
 	yield team.lead;
 	yield team.manager;
 	yield team.engineering;
-	TestingTeamIterator(team.testingTeam);
+	yield* TestingTeamIterator(team.testingTeam); // * - is a way to let "for of" loop get inside the testingTeam object
 }
 
 function* TestingTeamIterator(team) {
