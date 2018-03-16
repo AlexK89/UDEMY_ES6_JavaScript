@@ -45,19 +45,32 @@ for(let brand of brands()){
 console.log('All brands: ', allBrands);
 console.log('====================================');
 
+const testingTeam = {
+	lead: 'Amanda',
+	tester: 'Luke',
+};
+
 const engineeringTeam = {
+	testingTeam,
 	size: 3,
 	department: 'Engineering',
 	lead: 'Jill',
 	manager: 'Alex',
-	engineering: 'Dave'
+	engineering: 'Dave',
 };
 
 function* TeamIterator(team) {
 	yield team.lead;
 	yield team.manager;
 	yield team.engineering;
+	TestingTeamIterator(team.testingTeam);
 }
+
+function* TestingTeamIterator(team) {
+	yield team.lead;
+	yield team.tester;
+}
+
 const team = [];
 for(let member of TeamIterator(engineeringTeam)) {
 	team.push(member);
