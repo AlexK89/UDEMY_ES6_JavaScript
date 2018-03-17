@@ -3,7 +3,7 @@
 const promise = new Promise((resolve, reject)=> {
 	// here as a result we should call 'resolve()' or 'reject()'
 	// resolve();
-	reject();
+	// reject();
 });
 
 console.log(promise);
@@ -15,3 +15,19 @@ promise
 	.then(() => console.log('success'))
 	.then(() => console.log('We can use few ".then()" for promise'))
 	.catch((error) => console.log('rejected: ', error));
+
+
+const getInfo = new Promise((resolve, reject) => {
+	let result = "Old info";
+
+	setTimeout(() => {
+		result = "new info";
+		resolve(result);
+	}, 5000);
+
+	// reject(result);
+});
+
+getInfo
+	.then((result) => console.log(result))
+	.catch((result) => console.log(result));
