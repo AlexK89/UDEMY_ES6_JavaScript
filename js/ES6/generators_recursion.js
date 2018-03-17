@@ -15,8 +15,8 @@ class Comment {
 
 const children = [
 	new Comment('good'),
-	new Comment('bad comment', [new Comment('cool 1')]),
-	new Comment('meh', [new Comment('cool 2')]),
+	new Comment('bad comment', [new Comment('cool 1'), new Comment('cool 2')]),
+	new Comment('meh', [new Comment('cool 3')]),
 ];
 
 const tree = new Comment('Great article', children);
